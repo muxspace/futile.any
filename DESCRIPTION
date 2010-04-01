@@ -1,12 +1,11 @@
-Package: futile
+Package: futile.any
 Type: Package
-Title: Futile function utilities
+Title: Futile library to provide some polymorphism
 Version: {version}
 Date: {date}
 Author: Brian Lee Yung Rowe
 Maintainer: Brian Lee Yung Rowe <r@nurometic.com>
 Depends: R (>= 2.8.0)
-Suggests: zoo, xts, quantmod
-Description: A collection of utility functions to expedite software development
-License: GPL-2
+Description: A collection of utility functions that provide polymorphism over certain data types
+License: LGPL-3
 LazyLoad: yes
