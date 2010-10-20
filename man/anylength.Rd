@@ -1,5 +1,7 @@
 \name{anylength}
 \alias{anylength}
+\alias{anylength.nrow}
+\alias{anylength.len}
 \title{ Get the generic length of an object }
 \description{
   This function consolidates size dimensions for one and two dimensional data
@@ -9,10 +11,13 @@
   return the proper value.
 }
 \usage{
-anylength(data)
+anylength(...)
+anylength.nrow(data)
+anylength.len(data)
 }
 \arguments{
   \item{data}{ Any object that recognizes length or nrow }
+  \item{\dots}{ Abstract function controlled by futile.paradigm }
 }
 \details{
   When working with libraries, it is easy to forget the return type of a

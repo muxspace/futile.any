@@ -1,11 +1,10 @@
 # Get either names or colnames from a list or data.frame. This attempts to 
 # create some polymorphism around lists, vectors, and data.frames.
-anynames <- function(data)
-{
-  ns <- names(data)
-  if (is.null(ns)) { ns <- colnames(data) }
-  ns
-}
+anynames.names %when% (! is.null(names(data)))
+anynames.names <- function(data) names(data)
+
+anynames.col %when% (! is.null(colnames(data)))
+anynames.col <- function(data) colnames(data)
 
 "anynames<-" <- function(data, value)
 {
@@ -15,12 +14,11 @@ anynames <- function(data)
 }
 
 # Gets the length of a vector or the rows of a matrix or data frame.
-anylength <- function(data)
-{
-  len <- nrow(data)
-  if (is.null(len)) { len <- length(data) }
-  len
-}
+anylength.nrow %when% (! is.null(nrow(data)))
+anylength.nrow <- function(data) nrow(data)
+
+anylength.len %when% (TRUE)
+anylength.len <- function(data) length(data)
 
 # Lists out the types of a data.frame or other object that supports anynames
 anytypes <- function(data, fun=class)

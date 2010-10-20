@@ -1,5 +1,7 @@
 \name{anynames}
 \alias{anynames}
+\alias{anynames.names}
+\alias{anynames.col}
 \alias{anynames<-}
 \title{ Get the useful names of a data structure }
 \description{
@@ -8,10 +10,13 @@
   data structures with a single common interface.
 }
 \usage{
-anynames(data)
+anynames(...)
+anynames.names(data)
+anynames.col(data)
 }
 \arguments{
   \item{data}{ Any object the recognizes names or colnames }
+  \item{\dots}{ Abstract function controlled by futile.paradigm }
 }
 \details{
   Depending on the type of structure utilized in code, one needs to call either
