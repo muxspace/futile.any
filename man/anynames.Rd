@@ -1,7 +1,5 @@
 \name{anynames}
 \alias{anynames}
-\alias{anynames.names}
-\alias{anynames.col}
 \alias{anynames<-}
 \title{ Get the useful names of a data structure }
 \description{
@@ -11,11 +9,8 @@
 }
 \usage{
 anynames(...)
-anynames.names(data)
-anynames.col(data)
 }
 \arguments{
-  \item{data}{ Any object the recognizes names or colnames }
   \item{\dots}{ Abstract function controlled by futile.paradigm }
 }
 \details{
