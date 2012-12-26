@@ -12,9 +12,12 @@
 anylength(...)
 }
 \arguments{
-  \item{\dots}{ Abstract function controlled by futile.paradigm }
+  \item{\dots}{ Abstract function controlled by lambda.r }
 }
 \details{
+  anylength(data)
+  data - An object
+
   When working with libraries, it is easy to forget the return type of a
   function, particularly when there are a lot of switches between vectors,
   matrices, and other data structures. This function along with its

@@ -7,14 +7,17 @@
   data structures with a single common interface.
 }
 \usage{
-anytypes(data, fun = class)
+anytypes(...)
 }
 \arguments{
-  \item{data}{ Any object the recognizes names or colnames }
-  \item{fun}{ The function to use to get the types. Defaults to class, although
-    type or mode, etc. could be used }
+  \item{\dots}{ Abstract function controlled by lambda.r }
 }
 \details{
+  anytypes(data, fun = class)
+  data - An object
+  fun - The function to use to get the types. Defaults to class, although
+    type or mode, etc. could be used
+
   Depending on the type of structure utilized in code, one needs to call either
   names or colnames to get information related to the data sets within the 
   structure. The use of two separate functions can cause errors and slows
