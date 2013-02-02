@@ -24,3 +24,25 @@ anytypes(data, fun=class) %as% {
   names(ts) <- anynames(data)
   return(ts)
 }
+
+# If an object is empty, it is defined but has length 0.
+is.empty(x) %::% a : logical
+is.empty(x) %as% { length(x) < 1 }
+
+is.bad(x) %::% a : logical
+is.bad(x) %when% { is.null(x) } %as% TRUE
+is.bad(x) %when% { is.empty(x) } %as% TRUE
+
+is.bad(x) %::% list : list
+is.bad(x) %as% { lapply(x, is.bad) }
+
+is.bad(x) %::% data.frame : matrix
+is.bad(x) %as% { sapply(x, is.bad) }
+
+is.bad(x) %::% matrix : matrix
+is.bad(x) %as% { apply(x,1, is.bad) }
+
+is.bad(x) %::% a : logical
+is.bad(x) %as% { is.na(x) }
+
+
