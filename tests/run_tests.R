@@ -1,3 +1,3 @@
 library(testthat)
-library_if_available(futile.any)
+library(futile.any)
 test_package('futile.any')
