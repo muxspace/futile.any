@@ -13,7 +13,7 @@
 \tabular{ll}{
 Package: \tab futile.any\cr
 Type: \tab Package\cr
-Version: \tab 1.3.1\cr
+Version: \tab 1.3.2\cr
 Date: \tab 2015-07-06\cr
 License: \tab LGPL-3\cr
 LazyLoad: \tab yes\cr
