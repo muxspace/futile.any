@@ -1,12 +1,12 @@
 Package: futile.any
 Type: Package
-Title: Futile library to provide some polymorphic operations
+Title: A Tiny Utility Providing Polymorphic Operations
 Version: 1.3.1
 Date: 2015-07-06
 Author: Brian Lee Yung Rowe
 Maintainer: Brian Lee Yung Rowe <r@zatonovo.com>
 Depends: lambda.r (>= 1.1.0)
 Suggests: testthat
-Description: A collection of utility functions that provide polymorphism over certain data types
+Description: This utility package provides polymorphism over common operations and is now subsumed by lambda.tools.
 License: LGPL-3
 LazyLoad: yes
